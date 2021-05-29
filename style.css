@@ -1,0 +1,65 @@
+body {
+  background-color: black;
+}
+
+#main {
+  display: grid;
+  width: 70%;
+  grid-template:
+    "header header"
+    "origin image"
+    "films image"
+    "footer footer";
+  color: white;
+  padding: 30px 30px;
+  margin: auto;
+  gap: 20px;
+}
+
+header {
+  grid-area: header;
+}
+
+#img-div {
+  grid-area: image;
+  background-color: #1f1f1f;
+  display: flex;
+  flex-direction: column;
+}
+#image {
+  height: auto;
+  max-width: 100%;
+  background-color: transparent;
+}
+#img-caption {
+  padding-left: 10px;
+}
+
+
+#origin {
+  grid-area: origin;
+  background-color: #1f1f1f;
+  padding-left: 10px;
+}
+
+#films {
+  grid-area: films;
+  background-color: #1f1f1f;
+  padding-left: 10px;
+}
+
+#tribute-info {
+  grid-area: footer;
+}
+
+@media (max-width: 600px) {
+  #main {
+    margin: 0;
+    grid-template:
+      "header"
+      "image"
+      "origin"
+      "films"
+      "footer";
+   } 
+}
